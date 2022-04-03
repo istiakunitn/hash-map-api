@@ -9,7 +9,9 @@ describe Api::V1::HashMapsController, type: :request do
     context 'when the request is valid' do
       before do
         login_with_api(user)
+
         HashMap.create(user_id: user.id, name: "A hash map name", data:  '{"key1": "value1", "key2": "value2"}')
+        
         get "/api/v1/users/#{user.id}/hash_maps",
         headers: {
           'Authorization': response.headers['Authorization']
