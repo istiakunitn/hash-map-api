@@ -8,7 +8,7 @@
 #
 require 'faker'
 
-User.create(email: "member@this.application.it", password: "password", role: "member")
-User.create(email: "super_admin@this.application.it", password: "password", role: "super_admin")
+User.create(email: "member@this-application.it", password: "password", role: "member")
+User.create(email: "super_admin@this-application.it", password: "password", role: "super_admin")
 
 HashMap.create(user_id: User.first.id, name: "First Map", data:  '{"key1": "value1", "key2": "value2"}')
