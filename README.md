@@ -37,12 +37,12 @@ $ bundle exec rspec
 
 * ***Admin User*** 
 
-* Email: super_admin@this.application.it
+* Email: super_admin@this-application.it
 * Password: password
 
 * ***Member User*** 
 
-* Email: member@this.application.it
+* Email: member@this-application.it
 * Password: password
 
 
