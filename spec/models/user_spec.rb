@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
 
   context "Validations" do
-    it "builds a valid doctor profile" do
+    it "builds a valid user" do
       user = User.new(valid_user_attributes)
 
       expect(user).to be_valid

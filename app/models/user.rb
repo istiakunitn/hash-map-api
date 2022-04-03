@@ -9,6 +9,8 @@ class User < ApplicationRecord
   ROLE_MEMBER = "member"
   ROLES = [ROLE_SUPER_ADMIN, ROLE_MEMBER]
 
+  has_many :hash_maps
+
   validates :email, uniqueness: true, format: { with: EMAIL_PATTERN_REGEX }
   validates_presence_of :role
 

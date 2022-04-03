@@ -16,20 +16,6 @@ class Api::V1::UsersController < Api::V1::BaseController
 
   private
 
-  def check_authorization
-    unless current_user.is_super_admin?
-      render json: {
-        'errors': [
-          {
-            'status': '401',
-            'title': 'unauthorized'
-          }
-        ]
-      }, status: 401
-    end
-  end
-
-
   def find_user
     @user = User.find(params[:id])
   end

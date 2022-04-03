@@ -45,7 +45,7 @@ describe Api::V1::UsersController, type: :request do
     end
   end
 
-  context 'get #index' do
+  context 'get api/v1/users' do
     context "when user is a member" do
       before do
         login_with_api(user)
@@ -57,11 +57,6 @@ describe Api::V1::UsersController, type: :request do
       it 'returns 401' do
         expect(response.status).to eq(401)
       end
-
-      # it 'returns users' do
-      #   expect(json['data']).to have_id(user.id.to_s)
-      #   expect(json['data']).to have_type('users')
-      # end
     end
 
     context "when user is a super_admin" do

@@ -1,24 +1,63 @@
-# README
+## How to run this project?
+This project contains three folders
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* ***API*** - API/Backend server
+* ***UI*** - Frontend
+* ***REST Interface*** - REST Api interface to consume APIs
 
-Things you may want to cover:
+### Requirements
 
-* Ruby version
+* Ruby version: 2.4.2
+* Rails version: 5.2.6
 
-* System dependencies
+### Database
+ * Mysql Server version: 8.0.18 is used
 
-* Configuration
+### Running api server
 
-* Database creation
+```
+$ clone/download this application to your desired project folder
+$ cd hash-map-api/
+$ bundle install
+$ bin/rake db:create
+$ bin/rake db:migrate
+$ bin/rake db:seed
+$ bin/rails s
 
-* Database initialization
+```
 
-* How to run the test suite
+### Running spec
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+$ cd hash-map-api/
+$ bundle exec rspec
+```
 
-* Deployment instructions
+### Users
 
-* ...
+* ***Admin User*** 
+
+* Email: super_admin@this.application.it
+* Password: password
+
+* ***Member User*** 
+
+* Email: member@this.application.it
+* Password: password
+
+
+### Running UI
+```
+$ cd hash-map-ui/
+```
+
+### Running REST Interface
+
+```
+$ cd hash-map-api-swagger/
+$ install docker and docker-compose
+$ docker-compose up
+$ visit localhost:8083
+```
+
+NB: remember to run the [api server](#running-api-server) as mentioned above

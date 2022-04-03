@@ -6,7 +6,14 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1, defaults: { format: :json } do
-      resources :users, only: %w[index show]
+      resources :users, only: %w[index show] do
+        resources :hash_maps, only: %w[index]
+      end
+      resources :hash_maps, except: %w[index] do
+        collection do
+          get :all
+        end
+      end
     end
   end
 

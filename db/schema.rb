@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_02_001742) do
+ActiveRecord::Schema.define(version: 2022_04_03_070116) do
+
+  create_table "hash_maps", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "name"
+    t.string "description"
+    t.json "data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_hash_maps_on_user_id"
+  end
 
   create_table "jwt_denylist", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "jti", null: false
@@ -38,4 +48,5 @@ ActiveRecord::Schema.define(version: 2022_04_02_001742) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "hash_maps", "users"
 end
