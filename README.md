@@ -1,9 +1,4 @@
 ## How to run this project?
-This project contains three folders
-
-* ***API*** - API/Backend server
-* ***UI*** - Frontend
-* ***REST Interface*** - REST Api interface to consume APIs
 
 ### Requirements
 
@@ -45,19 +40,25 @@ $ bundle exec rspec
 * Email: member@this-application.it
 * Password: password
 
+## Other 2 projects are also done for demonstate purpose
 
-### Running UI
-```
-$ cd hash-map-ui/
-```
+* ***UI*** - Frontend
+* ***API documentation*** - REST Api interface to consume APIs
 
 ### Running REST Interface
 
 ```
-$ cd hash-map-api-swagger/
+$ clone hash-map-api-documentation
+$ cd hash-map-api-documentation/
 $ install docker and docker-compose
 $ docker-compose up
 $ visit localhost:8083
+```
+
+### Running UI
+```
+$ clone hash-map-frontend
+$ cd hash-map-frontend/
 ```
 
 NB: remember to run the [api server](#running-api-server) as mentioned above

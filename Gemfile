@@ -9,7 +9,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'devise'
 gem 'devise-jwt'
-gem 'rack-cors'
+gem "rack-cors", require: "rack/cors"
 gem 'jsonapi-rails'
 
 gem 'kaminari'
